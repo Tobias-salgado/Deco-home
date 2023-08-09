@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2? familia= Oswald:peso@300;600 & display=swap');
+/*----RESET----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Oswald', sans-serif
+}
+.boton{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 15px;
+    &:active{
+        background-color: gray;
+    color: black;
+    }
+}
