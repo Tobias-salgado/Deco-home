@@ -47,6 +47,10 @@ header {
         header nav ul li a:hover {
           color: black; }
 
+.carrusel img {
+  width: auto;
+  height: 625px; }
+
 .diseños {
   width: 100%;
   height: calc(100vh - 130px);
@@ -69,6 +73,45 @@ header {
   .diseños p {
     font-size: 30px;
     margin-bottom: 10px; }
+
+.bienvenidos {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .bienvenidos div {
+    width: 50%; }
+    .bienvenidos div h2 {
+      font-size: 35px; }
+      .bienvenidos div h2 span {
+        color: rgba(47, 47, 47, 0.852); }
+    .bienvenidos div p {
+      font-size: 20px; }
+  .bienvenidos img {
+    width: 600px;
+    height: 500px; }
+
+.producto h2 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px; }
+
+.producto .card-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+  .producto .card-flex div {
+    width: 250px;
+    height: 350px;
+    border: 2px solid black;
+    background-color: burlywood;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75); }
 
 footer {
   background-color: black;
