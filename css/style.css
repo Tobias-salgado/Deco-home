@@ -95,40 +95,7 @@ ul{
     top: 0;
 }
 
-/*--header{
-    background-color: rgb(128, 128, 128);
-    padding: 25px 15px 25px 15px;
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-}
-header h1{
-    color: white;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    text-align: left;
-}
-header h1 span{
-    color: rgba(47, 47, 47, 0.852);
-}
-header nav ul{
-    list-style: none;
-    display: flex;
-}
-header nav ul li{
-    margin: 10px
-}
-header nav ul li a{
-    text-decoration: none;
-    color: white;
-}
-header nav ul li a:hover{
-    color: black;
-}--*/
+
 /*---Acordeon-nosotros ---*/
 
 /*---MAIN---*/
