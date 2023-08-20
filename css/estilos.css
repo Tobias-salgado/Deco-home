@@ -19,37 +19,91 @@ body {
     background-color: gray;
     color: black; }
 
-header {
-  background-color: gray;
-  padding: 25px 15px 25px 15px;
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1; }
-  header h1 {
-    color: white;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    text-align: left; }
-    header h1 span {
-      color: rgba(47, 47, 47, 0.852); }
-  header nav ul {
-    list-style: none;
-    display: flex; }
-    header nav ul li {
-      margin: 10px; }
-      header nav ul li a {
-        text-decoration: none;
-        color: white; }
-        header nav ul li a:hover {
-          color: black; }
-
 .carrusel img {
   width: auto;
   height: 625px; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.header {
+  background-color: black;
+  box-shadow: 1px 1px 5px 0px grey;
+  position: sticky;
+  top: 0%;
+  width: 100%; }
+
+.logo {
+  display: inline-block;
+  color: white;
+  font-size: 60px;
+  margin-left: 10px; }
+  .logo span {
+    color: grey; }
+
+.nav {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: grey;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .5s ease-out; }
+
+.menu a {
+  display: block;
+  padding: 30px;
+  color: white; }
+  .menu a:hover {
+    background-color: rgba(0, 0, 0, 0.057); }
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px; }
+
+.hamb-line {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px; }
+
+.hamb-line::before,
+.hamb-line::after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%; }
+
+.hamb-line::before {
+  top: 5px; }
+
+.hamb-line::after {
+  top: 5px; }
+
+.side-menu {
+  display: none; }
+
+.side-menu:checked nav {
+  max-height: 100%; }
+
+.side-menu:checked .hamb .hamb-line {
+  background: transparent; }
+
+.side-menu:checked .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0; }
+
+.side-menu:checked .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0; }
 
 .diseños {
   width: 100%;
@@ -60,11 +114,7 @@ header {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  text-align: center; }
   .diseños h2 {
     display: inline-block;
     font-size: 70px;
@@ -74,21 +124,29 @@ header {
     font-size: 30px;
     margin-bottom: 10px; }
 
+.diseños {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 .bienvenidos {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .bienvenidos div {
-    width: 50%; }
-    .bienvenidos div h2 {
-      font-size: 35px; }
-      .bienvenidos div h2 span {
-        color: rgba(47, 47, 47, 0.852); }
-    .bienvenidos div p {
-      font-size: 20px; }
-  .bienvenidos img {
-    width: 600px;
-    height: 500px; }
+
+.bienvenidos div {
+  width: 50%; }
+  .bienvenidos div h2 {
+    font-size: 35px; }
+    .bienvenidos div h2 span {
+      color: rgba(47, 47, 47, 0.852); }
+  .bienvenidos div p {
+    font-size: 20px; }
+
+.bienvenidos img {
+  width: 600px;
+  height: 500px; }
 
 .producto h2 {
   background-color: black;
@@ -101,24 +159,74 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap; }
-  .producto .card-flex div {
-    width: 250px;
-    height: 350px;
-    border: 2px solid black;
-    background-color: burlywood;
+
+.producto .card-flex div {
+  width: 250px;
+  height: 350px;
+  border: 2px solid black;
+  background-color: burlywood;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75); }
+
+.producto div h3 {
+  margin-bottom: 25px; }
+
+.producto div img {
+  width: 250px;
+  height: 250px; }
+
+.producto div a:hover {
+  background-color: grey;
+  color: black; }
+
+.position {
+  position: fixed;
+  bottom: 100px;
+  right: 50px; }
+  .position img {
+    width: 50px; }
+
+.grid-galeria {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 250px;
+  gap: 12px; }
+  .grid-galeria div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.grid-item {
+  box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
+  position: relative; }
+  .grid-item h3 {
+    position: absolute;
+    bottom: 0;
     color: white;
-    text-align: center;
-    margin: 20px;
-    box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 28px 2px rgba(0, 0, 0, 0.75); }
+    background-color: rgba(0, 0, 0, 0.253);
+    width: 100%;
+    text-align: center; }
+
+.img-2 {
+  grid-column: span 2; }
+
+.img-6 {
+  grid-row: span 2; }
+
+.img-8 {
+  grid-row: span 2; }
 
 footer {
   background-color: black;
   color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 25px; }
   footer h2 {
     color: white;
@@ -129,6 +237,11 @@ footer {
   footer div a img {
     width: 50px;
     height: 50px; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 @media screen and (max-width: 950px) {
   .grid-galeria {
@@ -149,10 +262,19 @@ footer {
     width: 80%;
     height: 300px; } }
 
+@media screen and (min-width: 768px) {
+  .nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent; } }
+
 @media screen and (max-width: 720px) {
-  .hero h2 {
+  .diseños h2 {
     font-size: 40px; }
-  .hero p {
+  .diseños p {
     font-size: 25px; }
   footer {
     flex-direction: column; } }

@@ -46,7 +46,7 @@ ul{
     color: white;
 }
 .menu a:hover{
-    background-color: green;
+    background-color: rgba(0, 0, 0, 0.057);
 }
 .hamb{
     cursor: pointer;
@@ -346,10 +346,10 @@ footer div a img{
     }
 }
 @media screen and (max-width: 720px){
-    .hero h2{
+    .diseños h2{
         font-size: 40px;
     }
-    .hero p{
+    .diseños p{
         font-size: 25px;
     }
     footer{

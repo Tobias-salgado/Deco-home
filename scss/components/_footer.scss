@@ -1,13 +1,10 @@
 footer{
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: nth($paleta-colores, 1);
+    color: nth($paleta-colores, 3);
     padding: 25px;
     h2{
-        color: white;
-    font-size: 35px;
+        color: nth($paleta-colores, 3) ;
+    font-size: nth($font-size, 4);
     font-weight: 900;
     span{
         color: rgba(47, 47, 47, 0.852);
@@ -21,4 +18,7 @@ footer{
             }
         }
     }
+}
+footer{
+    @include flex2(flex, space-between, center)
 }

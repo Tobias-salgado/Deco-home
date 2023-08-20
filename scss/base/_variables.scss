@@ -1,4 +1,49 @@
-$color-primario: rgba(47, 47, 47, 0.852);
-$color-secundario: rgb(128, 128, 128);;
+//*VARIABLES
+//!Son la manera como los programadores le dan nombre a un valor para poder reusarlo, actualizarlo o simplemente registrarlo.
+//!Son reservadas en la memoria para almacenar datos (nos sirven para guardar informacion)
+$color-primario: black;
+$color-secundario: grey;
 $color-terciario: white;
-$cuarto-color: black;
+$cuarto-color: gray;
+
+//* LISTAS
+$paleta-colores:
+black,
+grey,
+white,
+gray,
+rgba(0, 0, 0, 0.057),
+rgba(47, 47, 47, 0.852),
+burlywood;
+
+$font-size:
+60px,
+70px,
+40px,
+35px,
+30px,
+25px,
+20px;
+
+// .cajas div:nth-child(){
+// }
+//h5{ font-size: nth($font-size, 3);
+
+@mixin flex($flex, $direction, $justify, $align){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin flex2($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin flex3($flex, $justify, $align, $wrap){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+

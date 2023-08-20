@@ -23,15 +23,23 @@
         height: 300px;
     }
 }
-
-
+@media screen and (min-width: 768px ){
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+}
 
 @media screen and (max-width: 720px){
-    .hero h2{
-        font-size: 40px;
+    .diseños h2{
+        font-size: nth($font-size, 3);
     }
-    .hero p{
-        font-size: 25px;
+    .diseños p{
+        font-size: nth($font-size, 6);
     }
     footer{
         flex-direction: column;
